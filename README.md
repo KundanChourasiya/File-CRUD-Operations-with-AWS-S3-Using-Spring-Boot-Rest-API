@@ -171,8 +171,8 @@ user this data for checking purpose.
   <dependency>
        <groupId>com.amazonaws</groupId>
        <artifactId>aws-java-sdk-s3</artifactId>
-			    <version>1.12.345</version>
-		</dependency>
+       <version>1.12.345</version>
+ </dependency>
 ```
 
 ## configure Mysql configuration and AmazonS3 accesskey, secret key, region and bucket name in applcation.properties file.
