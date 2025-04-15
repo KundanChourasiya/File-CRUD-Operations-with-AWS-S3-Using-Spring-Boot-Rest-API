@@ -83,6 +83,7 @@ public class FileServiceImpl implements FileService {
         time=time+hour+60*60*1000;
         expirationDate.setTime(time);
 
+        // generated Presigned Url Request
         GeneratePresignedUrlRequest generatePresignedUrlRequest = new GeneratePresignedUrlRequest(cloudBucket, fileName)
                 .withMethod(HttpMethod.GET)
                 .withExpiration(expirationDate);
@@ -135,6 +136,5 @@ public class FileServiceImpl implements FileService {
         }
         return null;
     }
-
 
 }

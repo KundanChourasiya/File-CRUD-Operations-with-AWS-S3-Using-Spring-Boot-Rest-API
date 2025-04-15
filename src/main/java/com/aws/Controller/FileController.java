@@ -91,7 +91,7 @@ public class FileController {
             return ResponseEntity.ok().body(response);
         }
         ApiResponse<String> response = new ApiResponse<>(false, "File Not Found", null);
-        return ResponseEntity.ok().body(response);
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST.value()).body(response);
     }
 
 }

@@ -21,6 +21,7 @@ public class AWSS3Config {
     @Value("${aws.region}")
     private String awsRegion;
 
+    // verify the amazonS3 credential
     @Bean
     public AmazonS3 s3Client() {
         BasicAWSCredentials awsCredentials = new BasicAWSCredentials(accessKeyId, secretAccessKey);
