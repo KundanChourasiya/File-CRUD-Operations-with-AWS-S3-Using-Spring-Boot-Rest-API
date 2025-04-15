@@ -485,6 +485,8 @@ Url - http://localhost:8080/aws/file/image/{id}
 
 Url - http://localhost:8080/aws/file/image/{id}
 
+![image](https://github.com/user-attachments/assets/556b2085-ea79-4fd1-bc8a-aeb7f3f5b79f)
+
 
 
 
