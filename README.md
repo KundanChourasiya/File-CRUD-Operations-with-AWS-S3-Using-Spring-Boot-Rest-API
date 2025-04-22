@@ -92,7 +92,7 @@
 Before running the API server, you should update the database config inside the application.properties file.
 Update the port number, username and password as per your local database config and storage file path configuration.
     
-```
+```properties
 # MySql Configuration
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.datasource.url=jdbc:mysql://localhost:3306/myDb
@@ -144,7 +144,7 @@ user this data for checking purpose.
 > 7. Create GlobalException class to handle all runtime exception.
 
 ## Important Dependency to be used
-```
+```xml
     <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -176,7 +176,7 @@ user this data for checking purpose.
 ```
 
 ## configure Mysql configuration and AmazonS3 accesskey, secret key, region and bucket name in applcation.properties file.
-```
+```properties
 # MySql Configuration
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.datasource.url=jdbc:mysql://localhost:3306/awsdb
@@ -199,7 +199,7 @@ aws.s3.bucket=*********** your bucket name *****************
 ```
 
 ## Create AWSS3Config class to configure AmazonS3 client Credentials.
-```
+```java
 @Configuration
 public class AWSS3Config {
 
@@ -227,7 +227,7 @@ public class AWSS3Config {
 ## Create FileService interface and FileServiceImpl class in Service package.
 
 ### *FileService*
-```
+```java
 public interface FileService {
 
     // Upload file to Amazon s3 bucket
@@ -251,7 +251,7 @@ public interface FileService {
 ```
 
 ### *FileServiceImpl*
-```
+```java
 @Service
 public class FileServiceImpl implements FileService {
 
@@ -374,7 +374,7 @@ public class FileServiceImpl implements FileService {
 
 ### *Create FileController class inside the Controller Package.* 
 
-```
+```java
 @RestController
 @RequestMapping("/aws/file")
 @AllArgsConstructor
